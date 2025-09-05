@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@theme {
-  --font-poppins: Raleway, sans-serif;
+
+body {
+  font-family: Raleway, sans-serif;
 }
