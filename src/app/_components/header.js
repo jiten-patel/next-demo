@@ -8,12 +8,16 @@ export default function Header() {
     <header className="bg-white">
       <div className="text-white bg-black text-center p-3 text-sm">{'Free shipping on all orders over $50'}</div>
       <nav className="mx-auto flex max-w-full items-center justify-between p-6 lg:px-28">
-        <div className="flex lg:flex-1"><Image className="h-7 w-auto" src="/Stepozo.png" width={113} height={35} alt="stepozo" /></div>
+        <div className="flex lg:flex-1">
+          <Link href="/">
+            <Image className="h-7 w-auto" src="/Stepozo.png" width={113} height={35} alt="stepozo" />
+          </Link>
+        </div>
         <ul className="lg:flex lg:gap-x-12">
           <li><Link href="#">Men</Link></li>
           <li><Link href="#">Women</Link></li>
           <li><Link href="#">Shop</Link></li>
-          <li><Link href="#">About</Link></li>
+          <li><Link href="/about">About</Link></li>
         </ul>
         <div className="hidden lg:flex lg:flex-1 lg:justify-end">
           <div className="mr-3">

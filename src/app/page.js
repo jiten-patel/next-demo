@@ -1,11 +1,12 @@
 import Image from "next/image";
-import styles from "./page.module.css";
 import Link from 'next/link';
 import { ShoppingCartIcon } from "@heroicons/react/24/outline";
+import Features from "./_components/features";
 
 export default function Home() {
   return (
     <div className='container-mx-auto'>
+      {/* Hero Banner Section */}
       <section className='row'>
         <div className='w-[37%] absolute z-10 top-[40%] left-[110px]'>
           <h1 className="text-black text-5xl font-bold leading-none mb-5">Step into greatness with Stepozo.</h1>
@@ -16,6 +17,7 @@ export default function Home() {
           <Image src="/Banner.png" alt="Shoes" width={1920} height={814} />
         </div>
       </section>
+      {/* Bestsellers Section */}
       <section className='row my-20'>
         <div className='align-center text-center mb-10'>
           <h2 className='text-black text-5xl font-bold mb-5'>Our Bestsellers</h2>
@@ -67,50 +69,110 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-
-      <section className={styles.gendersection}>
-        <div className={styles.gendercard}>
-          <Image src="/images/women.png" width={960} height={627} alt="Women Shoes" />
-          <div className={styles.overlay}>
-            <h3 className={styles.title}>For Women</h3>
-            <a href="#" className={styles.btn}>Shop women</a>
+      {/* Featured Products Section */}
+      <section className='row grid grid-cols-1 md:grid-cols-2'>
+        <div className='relative h-full'>
+          <div className="relative h-full z-0">
+            <Image src="/images/women.png" className="h-full object-cover" width={960} height={627} alt="Women Shoes" />
+          </div>
+          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between'>
+            <h3 className='text-5xl font-bold'>For Women</h3>
+            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full'>Shop women</a>
           </div>
         </div>
-        <div className={styles.gendercard}>
-          <Image src="/images/men.jpg" width={960} height={627} alt="Men Shoes" />
-          <div className={styles.overlay}>
-            <h3 className={styles.title}>For Men</h3>
-            <a href="#" className={styles.btn}>Shop men</a>
+        <div className='relative h-full'>
+          <div className="relative h-full object-cover z-0">
+            <Image src="/images/men.jpg" className="h-full object-cover" width={960} height={627} alt="Men Shoes" />
+          </div>
+          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between'>
+            <h3 className='text-5xl font-bold'>For Men</h3>
+            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full'>Shop men</a>
           </div>
         </div>
       </section>
-
-
-      <section className={styles.categories}>
-        <h2>Shop by Category</h2>
-        <div className={styles.categorygrid}>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/sneakers.png" alt="" /><p>Sneakers</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/leather.png" alt="" /><p>Leather Boots</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/snow.png" alt="" /><p>Snow Boots</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/running.png" alt="" /><p>Running Shoes</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/loafers.png" alt="" /><p>Loafers</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/oxfords.png" alt="" /><p>Oxfords shoes</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/sports.png" alt="" /><p>Sports Shoes</p><span>$59.00 USD</span></div>
-          <div className={styles.productcard}><Image width={387} height={388} src="/images/formal.png" alt="" /><p>Formal Shoes</p><span>$59.00 USD</span></div>
+      {/* Categories Section */}
+      <section className='row my-20 px-8 lg:px-0'>
+        <h2 className="text-5xl block font-bold text-center mb-4">{'Shop by Category'}</h2>
+        <div className='mt-6 px-8 lg:px-8 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8'>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/sneakers.png" width={387} height={388} alt="Sneakers" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Sneakers'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/leather.png" width={387} height={388} alt="Leather Boots" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Leather Boots'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/snow.png" width={387} height={388} alt="Snow Boots" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Snow Boots'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/running.png" width={387} height={388} alt="Running Shoes" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Running Shoes'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/loafers.png" width={387} height={388} alt="Loafers" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Loafers'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/oxfords.png" width={387} height={388} alt="Oxfords shoes" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Oxfords shoes'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/sports.png" width={387} height={388} alt="Sports Shoes" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Sports Shoes'}</Link>
+              </div>
+            </Link>
+          </div>
+          <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
+            <Link href='#'>
+              <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+                src="/images/formal.png" width={387} height={388} alt="Formal Shoes" />
+              <div className='mt-4 flex justify-center items-center'>
+                <Link href="#" className='text-2xl font-bold' >{'Formal Shoes'}</Link>
+              </div>
+            </Link>
+          </div>
         </div>
       </section>
-
-
-      <section className={styles.features}>
-        <div className={styles.feature}>🚚 Free Delivery</div>
-        <div className={styles.feature}>🔄 Easy return policy</div>
-        <div className={styles.feature}>📞 24/7 Support</div>
-      </section>
-
-
-      <section className={styles.promo}>
-        <div className={styles.promoimg}>
+      {/* Features Section */}
+      <Features />
+      {/* Promotional Banner Section */}
+      <section className='row my-32 px-8 lg:px-0'>
+        <div className='relative z-0'>
           <Image width={1920} height={800} src="/images/promo.png" alt="Promo Shoes" />
         </div>
       </section>

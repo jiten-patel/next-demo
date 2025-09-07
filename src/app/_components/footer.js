@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <footer className='bg-black text-white p-20 mt-28 mx-12 lg:mx-28 rounded-t-[50px]'>
+    <footer className='bg-black text-white px-20 pt-20 pb-6 mt-28 mx-12 lg:mx-28 rounded-t-[50px]'>
       <div className='flex flex-col md:flex-row justify-between pb-8'>
         <div className='pr-28 w-1/2'>
           <div className='w-full pb-8'><Image src="/Stepozo-white.png" alt="Stepozo" width={206} height={65} /></div>
@@ -40,9 +40,9 @@ export default function Footer() {
         <div className='w-1/6'>
           <h4 className="text-2xl font-semibold pb-5">{'Follow Us Now'}</h4>
           <ul>
-            <li className="pb-1.5 font-normal text-base"><Link className="flex" href="#"><FaInstagram size={24} /><span className="ml-2" >{'Instagram'}</span></Link></li>
-            <li className="pb-1.5 font-normal text-base"><Link className="flex" href="#"><FaXTwitter size={24} /><span className="ml-2" >{'Twitter'}</span></Link></li>
-            <li className="pb-1.5 font-normal text-base"><Link className="flex" href="#"><FaFacebookF size={24} /><span className="ml-2" >{'Facebook'}</span></Link></li>
+            <li className="pb-3 font-normal text-base"><Link className="flex" href="#"><FaInstagram size={24} /><span className="ml-2" >{'Instagram'}</span></Link></li>
+            <li className="pb-3 font-normal text-base"><Link className="flex" href="#"><FaXTwitter size={24} /><span className="ml-2" >{'Twitter'}</span></Link></li>
+            <li className="pb-3 font-normal text-base"><Link className="flex" href="#"><FaFacebookF size={24} /><span className="ml-2" >{'Facebook'}</span></Link></li>
           </ul>
         </div>
       </div>
