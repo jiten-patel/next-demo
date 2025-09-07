@@ -8,10 +8,10 @@ export default function Home() {
     <div className='container-mx-auto'>
       {/* Hero Banner Section */}
       <section className='row'>
-        <div className='w-[37%] absolute z-10 top-[40%] left-[110px]'>
-          <h1 className="text-black text-5xl font-bold leading-none mb-5">Step into greatness with Stepozo.</h1>
-          <p className="text-lg font-medium mb-10">Experience the freedom of breathable, comfortable shoes designed to take you anywhere you want to go with comfort meets confidence.</p>
-          <Link href="#" className='bg-white text-black font-bold py-3 px-5 rounded-3xl'>Explore now</Link>
+        <div className='w-[37%] absolute z-10 xl:top-[74%] xl:left-[110px] md:top-[15%] md:left-[90px] sm:left-[80px]'>
+          <h1 className="text-black  leading-none xl:text-5xl font-bold  xl:mb-5 md:text-3xl md:mb-4 sm:text-2xl/none">{"Step into greatness with Stepozo."}</h1>
+          <p className="text-lg font-medium mb-10 md:text-base/none">{"Experience the freedom of breathable, comfortable shoes designed to take you anywhere you want to go with comfort meets confidence."}</p>
+          <Link href="#" className='bg-white text-black font-bold py-3 px-5 rounded-3xl'>{"Explore now"}</Link>
         </div>
         <div className='relative z-0'>
           <Image src="/Banner.png" alt="Shoes" width={1920} height={814} />
@@ -24,7 +24,7 @@ export default function Home() {
         </div>
         <div className='mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8 px-8 lg:px-8'>
           <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
-            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto"
               src="/images/sneakers.png" width={387} height={388} alt="Sneakers" />
             <div className='mt-4 flex justify-between items-center'>
               <Link href="#" className='text-lg font-bold' >{'Sneakers'}</Link>
@@ -35,7 +35,7 @@ export default function Home() {
             </Link>
           </div>
           <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
-            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto"
               src="/images/running.png" width={387} height={388} alt="Running Shoes" />
             <div className='mt-4 flex justify-between items-center'>
               <Link href="#" className='text-lg font-bold' >{'Running Shoes'}</Link>
@@ -46,7 +46,7 @@ export default function Home() {
             </Link>
           </div>
           <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
-            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto"
               src="/images/oxfords.png" width={387} height={388} alt="Oxfords" />
             <div className='mt-4 flex justify-between items-center'>
               <Link href="#" className='text-lg font-bold' >{'Oxfords shoes'}</Link>
@@ -57,7 +57,7 @@ export default function Home() {
             </Link>
           </div>
           <div className='group relative p-5 border border-gray-200 rounded-lg hover:shadow-lg  transition-shadow duration-300'>
-            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto lg:h-96"
+            <Image className="aspect-square w-full rounded-md bg-gray-200 object-cover group-hover:opacity-85 lg:aspect-auto"
               src="/images/boat.png" width={387} height={388} alt="Boat Shoes" />
             <div className='mt-4 flex justify-between items-center'>
               <Link href="#" className='text-lg font-bold' >{'Boat Shoes'}</Link>
@@ -75,18 +75,18 @@ export default function Home() {
           <div className="relative h-full z-0">
             <Image src="/images/women.png" className="h-full object-cover" width={960} height={627} alt="Women Shoes" />
           </div>
-          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between'>
-            <h3 className='text-5xl font-bold'>For Women</h3>
-            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full'>Shop women</a>
+          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between items-center md:bottom-12 md:left-16 '>
+            <h3 className='text-5xl font-bold md:text-3xl/none'>For Women</h3>
+            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full md:text-base md:px-4 md:py-2'>Shop women</a>
           </div>
         </div>
         <div className='relative h-full'>
           <div className="relative h-full object-cover z-0">
             <Image src="/images/men.jpg" className="h-full object-cover" width={960} height={627} alt="Men Shoes" />
           </div>
-          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between'>
-            <h3 className='text-5xl font-bold'>For Men</h3>
-            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full'>Shop men</a>
+          <div className='absolute bottom-20 left-28 z-10 w-4/5 flex flex-row justify-between items-center md:bottom-12 md:left-16 '>
+            <h3 className='text-5xl font-bold md:text-3xl/none'>For Men</h3>
+            <a href="#" className='bg-white text-black text-lg font-bold px-5 py-3 rounded-full md:text-base md:px-4 md:py-2'>Shop men</a>
           </div>
         </div>
       </section>
